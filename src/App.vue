@@ -1,14 +1,39 @@
 <template>
+
   <div id="app">
-    <div id="nav">
-      <router-link :to="{ name: 'sign-up' }">Sign Up</router-link> 
-           
-          <router-link :to="{ name: 'create' }">Login</router-link>
+
+    <div id="nav">    
+      <router-link :to="{ name: 'home', params: { homepage: 'together' }  }">Home</router-link>
+           <router-link :to="{ name: 'sign-up' }">Sign Up</router-link> 
+           <router-link :to="{ name: 'food-show' }">foodShow</router-link>
+           <router-link :to="{ name: 'login' }">Login</router-link>     
     </div>
-    <router-view />
+    <router-view />	
+    <form>
+      <label>enter a number</label>
+    <input v-model="num1" type="text"/>
+    <br/>
+    <label>enter 2 nd number</label>
+    <input v-model="num2" type="text"/>
+    <br>
+     <button type="submit">Add</button>
+    </form>
+  <div>
+    {{num1}}
+  </div>
   </div>
 </template>
+<script>
+export default {
+  data:() => ({     
+num1=0,
+num2=0    
+  })
 
+};
+</script>
+
+  
 <style>
 #app {
   
@@ -16,12 +41,10 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(./assets/vuepic.jpg);
+  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(./assets/vuepic.jpg);
 	height: 100vh;
 	background-size: cover;
 	background-position: center;
-	font-family: 'Poppins', sans-serif;
-
 
 }
 
@@ -35,7 +58,6 @@
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
   display: inline-block;
   text-decoration: none;
     color: #fff;

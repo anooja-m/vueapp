@@ -1,18 +1,11 @@
-<template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
-</template>
-
-<script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
-export default {
-  name: "Home",
-  components: {
-    HelloWorld
-  }
-};
-</script>
+getData(){
+let config = {
+headers: {
+"x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
+"x-rapidapi-key": "J0Ro1CsdqumshmT7wG8r7qa4SIKjp1jqJHnjsntT9vFj2eaZzk"
+}
+}
+axios.get('https://coronavirus-monitor.p.rapidapi.com/coronavirus/affected.php',config).then(response=>{
+this.coronaData=response.data
+})
+},

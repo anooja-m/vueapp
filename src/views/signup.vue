@@ -1,32 +1,21 @@
 <template>
-  <!-- Card -->
-  <mdb-card>
-    <mdb-card-body>
-      <form>
-        <p class="h4 text-center py-4">Sign up</p>
-        <div class="grey-text">
-          <mdb-input label="Your name" icon="user" group type="text" validate error="wrong" success="right"/>
-          <mdb-input label="Your email" icon="envelope" group type="email" validate error="wrong" success="right"/>
-          <mdb-input label="Confirm your email" icon="exclamation-triangle" group type="text" validate error="wrong" success="right"/>
-          <mdb-input label="Your password" icon="lock" group type="password" validate/>
-        </div>
-        <div class="text-center py-4 mt-3">
-          <mdb-btn color="cyan" type="submit">Register</mdb-btn>
-        </div>
-      </form>
-    </mdb-card-body>
-  </mdb-card>
-  <!-- Card -->
+  <!-- Default form register -->
+  <form>
+    <p class="h4 text-center mb-4">Sign up</p>
+    <label for="defaultFormRegisterNameEx" class="grey-text">Your name</label>
+    <input type="text" id="defaultFormRegisterNameEx" class="form-control"/>
+    <br/>
+    <label for="defaultFormRegisterEmailEx" class="grey-text">Your email</label>
+    <input type="email" id="defaultFormRegisterEmailEx" class="form-control"/>
+    <br/>
+    <label for="defaultFormRegisterConfirmEx" class="grey-text">Confirm your email</label>
+    <input type="email" id="defaultFormRegisterConfirmEx" class="form-control"/>
+    <br/>
+    <label for="defaultFormRegisterPasswordEx" class="grey-text">Your password</label>
+    <input type="password" id="defaultFormRegisterPasswordEx" class="form-control"/>
+    <div class="text-center mt-4">
+      <button class="btn btn-unique" type="submit">Register</button>
+    </div>
+  </form>
+  <!-- Default form register -->
 </template>
-<script>
-  import { mdbInput, mdbBtn, mdbCard, mdbCardBody } from 'mdbvue';
-  export default {
-    name: 'Basic',
-    components: {
-      mdbInput,
-      mdbBtn,
-      mdbCard,
-      mdbCardBody
-    }
-  }
-</script>

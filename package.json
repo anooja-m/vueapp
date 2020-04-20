@@ -8,9 +8,11 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "babel-loader": "^8.1.0",
     "mdbootstrap": "^4.16.0",
     "mdbvue": "^6.7.0",
+    "unirest": "^0.6.0",
     "vue": "^2.6.11",
     "vue-router": "^3.1.6",
     "vuex": "^3.1.3"
